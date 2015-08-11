@@ -38,6 +38,8 @@ Options:
 
 --algorithm -> You can select which algorithm will be used to test you sequences. By default the REC option is selected and in the output all algorithms (RIC, iRIC, CRoSSeD and REC) will be represented. If you select a specific algorithm, only this one will be in the output file.
 
+
+
 example:
 
 python rec_test.py -t input.fasta -o output.txt
@@ -45,6 +47,7 @@ python rec_test.py -t input.fasta -o output.txt
 with new model
 
 python rec_test.py -t input.fasta -o output.txt -m model_folder 
+
 
 
 OUTPUT file:
@@ -69,9 +72,12 @@ PASS/FAIL REC stringent -> 1 if the sequence passes our stringent threshold.
 
 PASS/FAIL REC sensitive -> 1 if the sequence passes our sensitive threshold.
 
+
+
 TO DESIGN A NEW MODEL
 
 You can use your own dataset to create a new model following the same model we used. To this purpose, use the script rec_train.py
+
 
 
 References:
