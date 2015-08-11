@@ -14,13 +14,20 @@ Help available in the read-me file.
 #REQUIREMENTS#
 ##############
 python-2.7
+
 biopython-1.57
+
 REC uses 2 other tools in order to classity sequences as RSS or not. 
+
 The specific requirements for these tools should also be meet.
-RIC (1) - perl-5.14
-CRoSSeD (2) - Only tested under Linux system.
-        - Perl-5.8
-        - CRF++ toolkit ( http://crfpp.sourceforge.net/)
+
+ * RIC (1): 
+  - perl-5.14
+ * CRoSSeD (2): 
+  - Only tested under Linux system.
+  - Perl-5.8
+  - CRF++ toolkit ( http://crfpp.sourceforge.net/)
+
 #######
 #USAGE#
 #######
