@@ -24,7 +24,7 @@ def read_feature_file(filename):
                     header = temp
                 else:
                     feature = dict()
-                    for x in xrange(1, len(temp)):
+                    for x in xrange(2, len(temp)):
                         feature[header[x].upper()] = temp[x]
                     features.append(feature)
         return features
@@ -72,7 +72,7 @@ def convert_ric(filename, length, folder, output):
 
 def run_ric(test_file, length, base_folder, training_file, output, 
         folder):
-    #Run RIC using training_file as input for training RIC and
+    #Run RIC useing taining_file as input for training RIC and
     #test_file as input for RIC to test
     output = os.path.join(folder, output)
     if os.path.exists(output):
@@ -144,8 +144,8 @@ def train_crossed(positive, negative, model, unique, base_folder):
                 " -thr 0.999999 > temp",
                 shell=True).wait()
         if process == 0:
-            #os.remove(training_file)
-            #os.remove("temp")
+            os.remove(training_file)
+            os.remove("temp")
             return os.path.abspath(model)
         else:
             print("Error with CRoSSeD computation")
@@ -166,7 +166,7 @@ def run_crossed(filename, model, output, base_folder, folder):
                 + output + " > temp ",
                 shell=True).wait()
         if process == 0:
-            #os.remove("temp")
+            os.remove("temp")
             return output
         else:
             print("Error with CRoSSeD computation")
